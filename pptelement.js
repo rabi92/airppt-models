@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.FillType = exports.LinkType = exports.SpecialityType = exports.TextAlignment = exports.FontAttributes = exports.BorderType = void 0;
 var BorderType;
 (function (BorderType) {
     BorderType["dotted"] = "dotted";
@@ -23,6 +24,7 @@ var TextAlignment;
 var SpecialityType;
 (function (SpecialityType) {
     SpecialityType["Image"] = "Image";
+    SpecialityType["Table"] = "Table";
     SpecialityType["None"] = "None";
 })(SpecialityType = exports.SpecialityType || (exports.SpecialityType = {}));
 var LinkType;

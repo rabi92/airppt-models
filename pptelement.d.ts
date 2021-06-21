@@ -38,6 +38,11 @@ export interface PowerpointElement {
         };
         opacity: number;
     };
+    table?: {
+        rows: [
+            cols: []
+        ];
+    };
     fontStyle?: {
         font: string;
         fontSize: number;
@@ -68,6 +73,7 @@ export declare enum TextAlignment {
 }
 export declare enum SpecialityType {
     Image = "Image",
+    Table = "Table",
     None = "None"
 }
 export declare enum LinkType {
