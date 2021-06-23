@@ -25,6 +25,7 @@ var SpecialityType;
 (function (SpecialityType) {
     SpecialityType["Image"] = "Image";
     SpecialityType["Table"] = "Table";
+    SpecialityType["Title"] = "Title";
     SpecialityType["None"] = "None";
 })(SpecialityType = exports.SpecialityType || (exports.SpecialityType = {}));
 var LinkType;

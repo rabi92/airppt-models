@@ -74,6 +74,7 @@ export declare enum TextAlignment {
 export declare enum SpecialityType {
     Image = "Image",
     Table = "Table",
+    Title = "Title",
     None = "None"
 }
 export declare enum LinkType {
