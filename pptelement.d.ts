@@ -13,18 +13,7 @@ export interface PowerpointElement {
         cx: number;
         cy: number;
     };
-    paragraph?: {
-        text: string;
-        textCharacterProperties: {
-            fontAttributes: FontAttributes[];
-            font: string;
-            size: number;
-            fillColor: string;
-        };
-        paragraphProperties: {
-            alignment: TextAlignment;
-        };
-    };
+    paragraph?: Array<Paragraph>;
     shape?: {
         border?: {
             thickness: number;
@@ -53,6 +42,21 @@ export interface PowerpointElement {
         Uri: string;
     };
     raw: any;
+}
+export interface Paragraph {
+    content?: Array<Content>;
+    paragraphProperties?: {
+        alignment: TextAlignment;
+    };
+}
+export interface Content {
+    text: string;
+    textCharacterProperties: {
+        fontAttributes: FontAttributes[];
+        font: string;
+        size: number;
+        fillColor: string;
+    };
 }
 export declare enum BorderType {
     dotted = "dotted",

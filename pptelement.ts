@@ -1,7 +1,7 @@
 /**
  * The model for a parsed Powerpoint Element which the parsers generate
  */
-export interface PowerpointElement {
+ export interface PowerpointElement {
 	name: string; //or the name combined
 	shapeType: string; //the preset type of shape as defined the Offixe XML schema
 	specialityType: SpecialityType; //Do something special such as "images","textboxes","media"
@@ -14,18 +14,7 @@ export interface PowerpointElement {
 		cx: number;
 		cy: number;
 	};
-	paragraph?: {
-		text: string;
-		textCharacterProperties: {
-			fontAttributes: FontAttributes[];
-			font: string;
-			size: number;
-			fillColor: string;
-		};
-		paragraphProperties: {
-			alignment: TextAlignment;
-		};
-	};
+	paragraph?: Array<Paragraph>;
 	shape?: {
 		border?: {
 			thickness: number;
@@ -55,6 +44,23 @@ export interface PowerpointElement {
 		//wherever or whichever element this might link do
 	};
 	raw: any; //the entire unparsed element object
+}
+
+export interface Paragraph {
+	content?: Array<Content>;
+	paragraphProperties?: {
+		alignment: TextAlignment;
+	};
+}
+
+export interface Content {
+	text: string;
+	textCharacterProperties: {
+		fontAttributes: FontAttributes[];
+		font: string;
+		size: number;
+		fillColor: string;
+	};
 }
 
 export enum BorderType {
