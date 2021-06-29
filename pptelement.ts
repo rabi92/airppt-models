@@ -64,10 +64,10 @@ export enum BorderType {
 }
 
 export enum FontAttributes {
-	Bold,
-	Italics,
-	Underline,
-	StrikeThrough
+	Bold = "bold",
+	Italics = "italics",
+	Underline = "underline",
+	StrikeThrough = "strikeThrough"
 }
 
 export enum TextAlignment {
