@@ -64,10 +64,10 @@ export declare enum BorderType {
     solid = "solid"
 }
 export declare enum FontAttributes {
-    Bold = "bold",
-    Italics = "italics",
-    Underline = "underline",
-    StrikeThrough = "strikeThrough"
+    Bold = "b",
+    Italics = "i",
+    Underline = "u",
+    StrikeThrough = "strike"
 }
 export declare enum TextAlignment {
     Center = "center",

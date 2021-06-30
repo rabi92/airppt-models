@@ -9,10 +9,10 @@ var BorderType;
 })(BorderType = exports.BorderType || (exports.BorderType = {}));
 var FontAttributes;
 (function (FontAttributes) {
-    FontAttributes["Bold"] = "bold";
-    FontAttributes["Italics"] = "italics";
-    FontAttributes["Underline"] = "underline";
-    FontAttributes["StrikeThrough"] = "strikeThrough";
+    FontAttributes["Bold"] = "b";
+    FontAttributes["Italics"] = "i";
+    FontAttributes["Underline"] = "u";
+    FontAttributes["StrikeThrough"] = "strike";
 })(FontAttributes = exports.FontAttributes || (exports.FontAttributes = {}));
 var TextAlignment;
 (function (TextAlignment) {
