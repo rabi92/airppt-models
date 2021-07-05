@@ -41,7 +41,7 @@ export interface PowerpointElement {
         Type: LinkType;
         Uri: string;
     };
-    raw: any;
+    raw?: any;
 }
 export interface Paragraph {
     content?: Array<Content>;

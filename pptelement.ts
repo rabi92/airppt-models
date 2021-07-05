@@ -43,7 +43,7 @@
 		Uri: string;
 		//wherever or whichever element this might link do
 	};
-	raw: any; //the entire unparsed element object
+	raw?: any; //the entire unparsed element object
 }
 
 export interface Paragraph {
