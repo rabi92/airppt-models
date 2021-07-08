@@ -1,6 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FillType = exports.LinkType = exports.SpecialityType = exports.TextAlignment = exports.FontAttributes = exports.BorderType = void 0;
+exports.FillType = exports.LinkType = exports.SpecialityType = exports.TextAlignment = exports.FontAttributes = exports.BorderType = exports.TableDesign = void 0;
+var TableDesign;
+(function (TableDesign) {
+    TableDesign["isHeader"] = "firstRow";
+    TableDesign["bandedRows"] = "bandRow";
+})(TableDesign = exports.TableDesign || (exports.TableDesign = {}));
 var BorderType;
 (function (BorderType) {
     BorderType["dotted"] = "dotted";

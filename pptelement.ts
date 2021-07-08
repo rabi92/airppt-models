@@ -29,6 +29,7 @@
 		opacity: number;
 	};
 	table?: {
+		tableDesign?: TableDesign[],
 		rows: [
 			cols: []
 		]
@@ -46,6 +47,10 @@
 	raw?: any; //the entire unparsed element object
 }
 
+export enum TableDesign {
+	isHeader = "firstRow",
+	bandedRows = "bandRow"
+}
 export interface Paragraph {
 	content?: Array<Content>;
 	paragraphProperties?: {

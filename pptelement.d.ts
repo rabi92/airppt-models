@@ -28,6 +28,7 @@ export interface PowerpointElement {
         opacity: number;
     };
     table?: {
+        tableDesign?: TableDesign[];
         rows: [
             cols: []
         ];
@@ -42,6 +43,10 @@ export interface PowerpointElement {
         Uri: string;
     };
     raw?: any;
+}
+export declare enum TableDesign {
+    isHeader = "firstRow",
+    bandedRows = "bandRow"
 }
 export interface Paragraph {
     content?: Array<Content>;
