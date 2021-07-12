@@ -92,6 +92,7 @@ export enum SpecialityType {
 	Image = "Image",
 	Table = "Table",
 	Title = "Title",
+	Paragraph = "Paragraph",
 	None = "None"
 }
 

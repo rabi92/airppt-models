@@ -84,6 +84,7 @@ export declare enum SpecialityType {
     Image = "Image",
     Table = "Table",
     Title = "Title",
+    Paragraph = "Paragraph",
     None = "None"
 }
 export declare enum LinkType {
