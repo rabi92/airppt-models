@@ -1,6 +1,6 @@
 {
 	"name": "airppt-models-plus",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "Shared type Models for AirPPT Packages",
 	"main": "index.js",
 	"scripts": {
