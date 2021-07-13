@@ -53,6 +53,11 @@ export interface Paragraph {
     paragraphProperties?: {
         alignment: TextAlignment;
     };
+    list?: List;
+}
+export interface List {
+    listType: ListType;
+    listItems: Array<Paragraph>;
 }
 export interface Content {
     text: string;
@@ -94,4 +99,8 @@ export declare enum LinkType {
 export declare enum FillType {
     Image = "Image",
     Solid = "Solid"
+}
+export declare enum ListType {
+    Ordered = "Ordered",
+    UnOrdered = "UnOrdered"
 }

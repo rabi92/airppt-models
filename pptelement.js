@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FillType = exports.LinkType = exports.SpecialityType = exports.TextAlignment = exports.FontAttributes = exports.BorderType = exports.TableDesign = void 0;
+exports.ListType = exports.FillType = exports.LinkType = exports.SpecialityType = exports.TextAlignment = exports.FontAttributes = exports.BorderType = exports.TableDesign = void 0;
 var TableDesign;
 (function (TableDesign) {
     TableDesign["isHeader"] = "firstRow";
@@ -44,3 +44,8 @@ var FillType;
     FillType["Image"] = "Image";
     FillType["Solid"] = "Solid";
 })(FillType = exports.FillType || (exports.FillType = {}));
+var ListType;
+(function (ListType) {
+    ListType["Ordered"] = "Ordered";
+    ListType["UnOrdered"] = "UnOrdered";
+})(ListType = exports.ListType || (exports.ListType = {}));
