@@ -48,4 +48,5 @@ var ListType;
 (function (ListType) {
     ListType["Ordered"] = "Ordered";
     ListType["UnOrdered"] = "UnOrdered";
+    ListType["None"] = "None";
 })(ListType = exports.ListType || (exports.ListType = {}));

@@ -102,5 +102,6 @@ export declare enum FillType {
 }
 export declare enum ListType {
     Ordered = "Ordered",
-    UnOrdered = "UnOrdered"
+    UnOrdered = "UnOrdered",
+    None = "None"
 }
