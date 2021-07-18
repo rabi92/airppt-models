@@ -72,6 +72,7 @@ export interface Content {
 		size: number;
 		fillColor: string;
 	};
+	hyperlink?: string
 }
 
 export enum BorderType {

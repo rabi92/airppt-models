@@ -67,6 +67,7 @@ export interface Content {
         size: number;
         fillColor: string;
     };
+    hyperlink?: string;
 }
 export declare enum BorderType {
     dotted = "dotted",
