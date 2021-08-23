@@ -65,7 +65,7 @@ export interface List {
 }
 
 export interface Content {
-	text: string;
+	text: string[];
 	textCharacterProperties: {
 		fontAttributes: FontAttributes[];
 		font: string;
@@ -103,6 +103,8 @@ export enum SpecialityType {
 	Table = "Table",
 	Title = "Title",
 	Paragraph = "Paragraph",
+	Audio = "Audio",
+	Video = "Video",
 	None = "None"
 }
 

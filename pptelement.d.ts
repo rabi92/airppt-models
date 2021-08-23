@@ -60,7 +60,7 @@ export interface List {
     listItems: Array<Paragraph>;
 }
 export interface Content {
-    text: string;
+    text: string[];
     textCharacterProperties: {
         fontAttributes: FontAttributes[];
         font: string;
@@ -94,6 +94,8 @@ export declare enum SpecialityType {
     Table = "Table",
     Title = "Title",
     Paragraph = "Paragraph",
+    Audio = "Audio",
+    Video = "Video",
     None = "None"
 }
 export declare enum LinkType {

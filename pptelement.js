@@ -32,6 +32,8 @@ var SpecialityType;
     SpecialityType["Table"] = "Table";
     SpecialityType["Title"] = "Title";
     SpecialityType["Paragraph"] = "Paragraph";
+    SpecialityType["Audio"] = "Audio";
+    SpecialityType["Video"] = "Video";
     SpecialityType["None"] = "None";
 })(SpecialityType = exports.SpecialityType || (exports.SpecialityType = {}));
 var LinkType;
