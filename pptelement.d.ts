@@ -43,7 +43,7 @@ export interface PowerpointElement {
         Uri: string;
     };
     raw?: any;
-    description?: string;
+    altText?: string;
 }
 export declare enum TableDesign {
     isHeader = "firstRow",
