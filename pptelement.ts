@@ -45,6 +45,7 @@
 		//wherever or whichever element this might link do
 	};
 	raw?: any; //the entire unparsed element object
+	altText?: string;
 }
 
 export enum TableDesign {
