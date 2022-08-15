@@ -1,8 +1,8 @@
 import { PowerpointElement } from "./pptelement";
 
 export interface PowerpointDetails {
-	slideShowGlobals: any;
-	slideShowTheme: any;
-	powerPointElements: PowerpointElement[];
-	inputPath: string;
+    // slideShowGlobals: any;
+    powerPointElements: PowerpointElement[];
+    inputPath: string;
+    slidesLength: number;
 }
