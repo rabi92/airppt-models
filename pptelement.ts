@@ -21,6 +21,7 @@ export interface PowerpointElement {
 			font: string;
 			size: number;
 			fillColor: string;
+			highlightColor: string;
 		};
 		paragraphProperties: {
 			alignment: TextAlignment;
