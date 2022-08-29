@@ -13,18 +13,7 @@ export interface PowerpointElement {
         cx: number;
         cy: number;
     };
-    paragraph?: {
-        text: string;
-        textCharacterProperties: {
-            fontAttributes: FontAttributes[];
-            font: string;
-            size: number;
-            fillColor: string;
-        };
-        paragraphProperties: {
-            alignment: TextAlignment;
-        };
-    };
+    paragraph?: Array<Paragraph>;
     shape?: {
         border?: {
             thickness: number;
@@ -38,6 +27,12 @@ export interface PowerpointElement {
         };
         opacity: number;
     };
+    table?: {
+        tableDesign?: TableDesign[];
+        rows: [
+            cols: []
+        ];
+    };
     fontStyle?: {
         font: string;
         fontSize: number;
@@ -47,7 +42,36 @@ export interface PowerpointElement {
         Type: LinkType;
         Uri: string;
     };
-    raw: any;
+    raw?: any;
+    altText?: string;
+}
+export declare enum TableDesign {
+    isHeader = "firstRow",
+    bandedRows = "bandRow"
+}
+export interface Paragraph {
+    content?: Array<Content>;
+    paragraphProperties?: {
+        alignment: TextAlignment;
+    };
+    list?: List;
+}
+export interface List {
+    listType: ListType;
+    listItems: Array<Paragraph>;
+}
+export interface Content {
+    text: string[];
+    textCharacterProperties: {
+        fontAttributes: FontAttributes[];
+        font: string;
+        size: number;
+        fillColor: string;
+    };
+    hyperlink?: {
+        Type: LinkType;
+        Uri: string;
+    };
 }
 export declare enum BorderType {
     dotted = "dotted",
@@ -55,10 +79,10 @@ export declare enum BorderType {
     solid = "solid"
 }
 export declare enum FontAttributes {
-    Bold = 0,
-    Italics = 1,
-    Underline = 2,
-    StrikeThrough = 3
+    Bold = "b",
+    Italics = "i",
+    Underline = "u",
+    StrikeThrough = "strike"
 }
 export declare enum TextAlignment {
     Center = "center",
@@ -68,6 +92,11 @@ export declare enum TextAlignment {
 }
 export declare enum SpecialityType {
     Image = "Image",
+    Table = "Table",
+    Title = "Title",
+    Paragraph = "Paragraph",
+    Audio = "Audio",
+    Video = "Video",
     None = "None"
 }
 export declare enum LinkType {
@@ -77,4 +106,9 @@ export declare enum LinkType {
 export declare enum FillType {
     Image = "Image",
     Solid = "Solid"
+}
+export declare enum ListType {
+    Ordered = "Ordered",
+    UnOrdered = "UnOrdered",
+    None = "None"
 }

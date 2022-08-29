@@ -1,7 +1,7 @@
 /**
  * The model for a parsed Powerpoint Element which the parsers generate
  */
-export interface PowerpointElement {
+ export interface PowerpointElement {
 	name: string; //or the name combined
 	shapeType: string; //the preset type of shape as defined the Offixe XML schema
 	specialityType: SpecialityType; //Do something special such as "images","textboxes","media"
@@ -14,6 +14,7 @@ export interface PowerpointElement {
 		cx: number;
 		cy: number;
 	};
+<<<<<<< HEAD
 	paragraph?: {
 		text: string;
 		textCharacterProperties: {
@@ -27,6 +28,9 @@ export interface PowerpointElement {
 			alignment: TextAlignment;
 		};
 	};
+=======
+	paragraph?: Array<Paragraph>;
+>>>>>>> dev
 	shape?: {
 		border?: {
 			thickness: number;
@@ -40,6 +44,12 @@ export interface PowerpointElement {
 		};
 		opacity: number;
 	};
+	table?: {
+		tableDesign?: TableDesign[],
+		rows: [
+			cols: []
+		]
+	};
 	fontStyle?: {
 		font: string;
 		fontSize: number;
@@ -50,7 +60,39 @@ export interface PowerpointElement {
 		Uri: string;
 		//wherever or whichever element this might link do
 	};
-	raw: any; //the entire unparsed element object
+	raw?: any; //the entire unparsed element object
+	altText?: string;
+}
+
+export enum TableDesign {
+	isHeader = "firstRow",
+	bandedRows = "bandRow"
+}
+export interface Paragraph {
+	content?: Array<Content>;
+	paragraphProperties?: {
+		alignment: TextAlignment;
+	};
+	list?: List;
+}
+
+export interface List {
+	listType: ListType;
+	listItems: Array<Paragraph>;
+}
+
+export interface Content {
+	text: string[];
+	textCharacterProperties: {
+		fontAttributes: FontAttributes[];
+		font: string;
+		size: number;
+		fillColor: string;
+	};
+	hyperlink?: {
+		Type: LinkType;
+		Uri: string;
+	};
 }
 
 export enum BorderType {
@@ -60,10 +102,10 @@ export enum BorderType {
 }
 
 export enum FontAttributes {
-	Bold,
-	Italics,
-	Underline,
-	StrikeThrough
+	Bold = "b",
+	Italics = "i",
+	Underline = "u",
+	StrikeThrough = "strike"
 }
 
 export enum TextAlignment {
@@ -75,6 +117,11 @@ export enum TextAlignment {
 
 export enum SpecialityType {
 	Image = "Image",
+	Table = "Table",
+	Title = "Title",
+	Paragraph = "Paragraph",
+	Audio = "Audio",
+	Video = "Video",
 	None = "None"
 }
 
@@ -86,4 +133,10 @@ export enum LinkType {
 export enum FillType {
 	Image = "Image",
 	Solid = "Solid"
+}
+
+export enum ListType {
+	Ordered = "Ordered",
+	UnOrdered = "UnOrdered",
+	None = "None"
 }
