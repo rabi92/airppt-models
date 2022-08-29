@@ -14,23 +14,7 @@
 		cx: number;
 		cy: number;
 	};
-<<<<<<< HEAD
-	paragraph?: {
-		text: string;
-		textCharacterProperties: {
-			fontAttributes: FontAttributes[];
-			font: string;
-			size: number;
-			fillColor: string;
-			highlightColor: string;
-		};
-		paragraphProperties: {
-			alignment: TextAlignment;
-		};
-	};
-=======
 	paragraph?: Array<Paragraph>;
->>>>>>> dev
 	shape?: {
 		border?: {
 			thickness: number;
@@ -88,6 +72,7 @@ export interface Content {
 		font: string;
 		size: number;
 		fillColor: string;
+		highlightColor: string;
 	};
 	hyperlink?: {
 		Type: LinkType;
