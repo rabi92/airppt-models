@@ -72,6 +72,7 @@ export interface Content {
 		font: string;
 		size: number;
 		fillColor: string;
+		highlightColor: string;
 	};
 	hyperlink?: {
 		Type: LinkType;
