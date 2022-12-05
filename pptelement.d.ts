@@ -15,23 +15,13 @@ export interface PowerpointElement {
     };
     paragraph?: Array<Paragraph>;
     shape?: {
-        border?: {
-            thickness: number;
-            color: string;
-            type: BorderType;
-            radius?: number;
-        };
-        fill: {
-            fillType: FillType;
-            fillColor: string;
-        };
+        border?: Border;
+        fill: Fill;
         opacity: number;
     };
     table?: {
         tableDesign?: TableDesign[];
-        rows: [
-            cols: []
-        ];
+        rows: [cols: []];
     };
     fontStyle?: {
         font: string;
@@ -45,6 +35,16 @@ export interface PowerpointElement {
     raw?: any;
     altText?: string;
 }
+export declare type Fill = {
+    fillType: FillType;
+    fillColor: string;
+};
+export declare type Border = {
+    thickness: number;
+    color: string;
+    type: BorderType;
+    radius?: number;
+};
 export declare enum TableDesign {
     isHeader = "firstRow",
     bandedRows = "bandRow"
